@@ -1,18 +1,7 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "net.serenity-bdd:serenity-gradle-plugin:${serenityVersion}"
-    }
-}
-
 plugins {
     id 'java'
     id 'idea'
 }
-
-apply plugin: 'net.serenity-bdd.serenity-gradle-plugin'
 
 group = 'com.automatizacion'
 version = '1.0-SNAPSHOT'
@@ -36,18 +25,13 @@ dependencies {
 test {
     useJUnit()
     systemProperties System.getProperties()
-    testLogging {
-        events "passed", "skipped", "failed"
-    }
+    finalizedBy 'aggregate'
 }
 
-serenity {
-    testRoot = "com.automatizacion"
-    requirementsDir = "src/test/resources/features"
+tasks.register('aggregate') {
+    dependsOn test
 }
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
-
-gradle.startParameter.continueOnFailure = true
