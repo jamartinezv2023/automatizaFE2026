@@ -1,0 +1,39 @@
+> Task :clean
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :compileTestJava
+C:\finalFE2026\src\test\java\com\automatizacion\runners\LoginUsuarioRunner.java:7: warning: [removal] CucumberWithSerenity in net.serenitybdd.cucumber has been deprecated and marked for removal
+@RunWith(CucumberWithSerenity.class)
+         ^
+Note: C:\finalFE2026\src\test\java\com\automatizacion\runners\LoginUsuarioRunner.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 warning
+
+> Task :processTestResources
+> Task :testClasses
+> Task :test
+
+com.automatizacion.runners.LoginUsuarioRunner > Inicio de sesion de usuario.Iniciar sesion como cliente registrado FAILED
+    org.opentest4j.AssertionFailedError at ErrorTally.java:39
+
+1 test completed, 1 failed
+
+> Task :test FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///C:/finalFE2026/build/reports/tests/test/index.html
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1m 33s
+4 actionable tasks: 4 executed

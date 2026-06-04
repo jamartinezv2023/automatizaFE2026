@@ -1,0 +1,250 @@
+Initialized native services in: C:\Users\iesaf\.gradle\native
+Initialized jansi services in: C:\Users\iesaf\.gradle\native
+Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot, JAVA_VERSION=17.0.17, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=17.0.17+10, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=17.0.17+10, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
+The client will now receive all logging from the daemon (pid: 5388). The daemon log file: C:\Users\iesaf\.gradle\daemon\7.6.4\daemon-5388.out.log
+Starting 15th build in daemon [uptime: 3 hrs 44 mins 24.205 secs, performance: 100%]
+Using 8 worker leases.
+Now considering [C:\finalFE2026] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\finalFE2026\settings.gradle'.
+Projects loaded. Root project using build file 'C:\finalFE2026\build.gradle'.
+Included projects: [root project 'automatizaFE2026']
+
+> Configure project :
+Evaluating root project 'automatizaFE2026' using build file 'C:\finalFE2026\build.gradle'.
+All projects evaluated.
+Task name matched 'clean'
+Task name matched 'test'
+Task name matched 'aggregate'
+Selected primary task 'clean' from project :
+Selected primary task 'test' from project :
+Selected primary task 'aggregate' from project :
+Tasks to be executed: [task ':clean', task ':compileJava', task ':processResources', task ':classes', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':aggregate']
+Tasks that were excluded: []
+Resolve mutations for :clean (Thread[Execution worker,5,main]) started.
+:clean (Thread[Execution worker,5,main]) started.
+destroyer locations for task group 0 (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :clean
+Caching disabled for task ':clean' because:
+  Build cache is disabled
+Task ':clean' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :compileJava (Thread[Execution worker,5,main]) started.
+:compileJava (Thread[Execution worker,5,main]) started.
+
+> Task :compileJava NO-SOURCE
+Skipping task ':compileJava' as it has no source files and no previous output files.
+Resolve mutations for :processResources (Thread[Execution worker,5,main]) started.
+:processResources (Thread[Execution worker,5,main]) started.
+
+> Task :processResources NO-SOURCE
+Skipping task ':processResources' as it has no source files and no previous output files.
+Resolve mutations for :classes (Thread[Execution worker,5,main]) started.
+:classes (Thread[Execution worker,5,main]) started.
+
+> Task :classes UP-TO-DATE
+Skipping task ':classes' as it has no actions.
+Resolve mutations for :compileTestJava (Thread[Execution worker,5,main]) started.
+:compileTestJava (Thread[Execution worker,5,main]) started.
+
+> Task :compileTestJava
+Caching disabled for task ':compileTestJava' because:
+  Build cache is disabled
+Task ':compileTestJava' is not up-to-date because:
+  Output property 'destinationDirectory' file C:\finalFE2026\build\classes\java\test has been removed.
+  Output property 'destinationDirectory' file C:\finalFE2026\build\classes\java\test\com has been removed.
+  Output property 'destinationDirectory' file C:\finalFE2026\build\classes\java\test\com\automatizacion has been removed.
+The input changes require a full rebuild for incremental task ':compileTestJava'.
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain 'C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot'.
+Compiling with JDK Java compiler API.
+C:\finalFE2026\src\test\java\com\automatizacion\runners\LoginUsuarioRunner.java:7: warning: [removal] CucumberWithSerenity in net.serenitybdd.cucumber has been deprecated and marked for removal
+@RunWith(CucumberWithSerenity.class)
+         ^
+Note: C:\finalFE2026\src\test\java\com\automatizacion\runners\LoginUsuarioRunner.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 warning
+Class dependency analysis for incremental compilation took 0.013 secs.
+Created classpath snapshot for incremental compilation in 0.03 secs.
+Resolve mutations for :processTestResources (Thread[Execution worker,5,main]) started.
+:processTestResources (Thread[Execution worker,5,main]) started.
+
+> Task :processTestResources
+Caching disabled for task ':processTestResources' because:
+  Build cache is disabled
+Task ':processTestResources' is not up-to-date because:
+  Output property 'destinationDir' file C:\finalFE2026\build\resources\test has been removed.
+  Output property 'destinationDir' file C:\finalFE2026\build\resources\test\features has been removed.
+  Output property 'destinationDir' file C:\finalFE2026\build\resources\test\features\login has been removed.
+Resolve mutations for :testClasses (Thread[Execution worker,5,main]) started.
+:testClasses (Thread[Execution worker,5,main]) started.
+
+> Task :testClasses
+Skipping task ':testClasses' as it has no actions.
+Resolve mutations for :test (Thread[Execution worker,5,main]) started.
+:test (Thread[Execution worker,5,main]) started.
+Gradle Test Executor 11 started executing tests.
+
+> Task :test
+Caching disabled for task ':test' because:
+  Build cache is disabled
+Task ':test' is not up-to-date because:
+  Output property 'binaryResultsDirectory' file C:\finalFE2026\build\test-results\test\binary has been removed.
+  Output property 'binaryResultsDirectory' file C:\finalFE2026\build\test-results\test\binary\output.bin has been removed.
+  Output property 'binaryResultsDirectory' file C:\finalFE2026\build\test-results\test\binary\output.bin.idx has been removed.
+Starting process 'Gradle Test Executor 11'. Working directory: C:\finalFE2026 Command: C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin\java.exe -Dclave=Palmira*2026 -Dfile.separator=\ -Djava.class.path=C:\Users\iesaf\.gradle\wrapper\dists\gradle-7.6.4-bin\eq47ircvekz8t0m2yd28ebfsh\gradle-7.6.4\lib\gradle-launcher-7.6.4.jar -Djava.class.version=61.0 -Djava.home=C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot -Djava.library.path=C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Users\iesaf\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\iesaf\bin;C:\Users\iesaf\AppData\Local\Programs\Python\Python314\Scripts;C:\Users\iesaf\AppData\Local\Programs\Python\Python314;C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\Gradle\gradle-9.2.1\bin;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files\Amazon\AWSCLIV2;C:\Program Files\Apache\Maven\apache-maven-3.9.9\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-h;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\PostgreSQL\17\bin;C:\ProgramData\chocolatey\bin;C:\Terraform;C:\Users\iesaf\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\iesaf\AppData\Roaming\npm;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\laragon\bin\php\php-8.3.30-Win32-vs16-x64;C:\laragon\bin\mysql\mysql-8.4.3-winx64\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.;C:\Program Files\Amazon\AWSCLIV2;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-h;C:\Terraform;C:\Terraform;C:\Users\iesaf\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\Users\iesaf\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;. -Djava.runtime.name=OpenJDK Runtime Environment -Djava.runtime.version=17.0.17+10 -Djava.specification.maintenance.version=1 -Djava.specification.name=Java Platform API Specification -Djava.specification.vendor=Oracle Corporation -Djava.specification.version=17 -Djava.vendor=Eclipse Adoptium -Djava.vendor.url=https://adoptium.net/ -Djava.vendor.url.bug=https://github.com/adoptium/adoptium-support/issues -Djava.vendor.version=Temurin-17.0.17+10 -Djava.version=17.0.17 -Djava.version.date=2025-10-21 -Djava.vm.compressedOopsMode=32-bit -Djava.vm.info=mixed mode, sharing -Djava.vm.name=OpenJDK 64-Bit Server VM -Djava.vm.specification.name=Java Virtual Machine Specification -Djava.vm.specification.vendor=Oracle Corporation -Djava.vm.specification.version=17 -Djava.vm.vendor=Eclipse Adoptium -Djava.vm.version=17.0.17+10 -Djdk.debug=release -Dlibrary.jansi.path=C:\Users\iesaf\.gradle\native\jansi\1.18\windows64 -Dline.separator=
+ -Dnative.encoding=Cp1252 -Dorg.gradle.appname=gradlew -Dorg.gradle.internal.worker.tmpdir=C:\finalFE2026\build\tmp\test\work -Dorg.gradle.native=false -Dos.arch=amd64 -Dos.name=Windows 10 -Dos.version=10.0 -Dpath.separator=; -Dsun.arch.data.model=64 -Dsun.boot.library.path=C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin -Dsun.cpu.endian=little -Dsun.cpu.isalist=amd64 -Dsun.io.unicode.encoding=UnicodeLittle -Dsun.java.command=org.gradle.launcher.daemon.bootstrap.GradleDaemon 7.6.4 -Dsun.java.launcher=SUN_STANDARD -Dsun.jnu.encoding=Cp1252 -Dsun.management.compiler=HotSpot 64-Bit Tiered Compilers -Dsun.os.patch.level -Duser.dir=C:\finalFE2026 -Duser.home=C:\Users\iesaf -Duser.name=jose.martinez7 -Duser.script -Duser.timezone=America/Bogota -Dusuario=jamartinezv@sagradafamiliapalmira.edu.co @C:\Users\iesaf\.gradle\.tmp\gradle-worker-classpath18310580765630280044txt -Xmx512m -Dfile.encoding=Cp1252 -Djava.io.tmpdir=C:\Users\iesaf\AppData\Local\Temp\ -Duser.country=ES -Duser.language=es -Duser.variant -ea worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 11'
+Successfully started process 'Gradle Test Executor 11'
+
+com.automatizacion.runners.LoginUsuarioRunner STANDARD_ERROR
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - 
+
+    -------------------------------------------------------------------------------------
+         _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+        /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+       |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+        \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+    .----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+    |_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+     News and tutorials at https://serenity-bdd.info                                     
+     Documentation at https://serenity-bdd.github.io                                     
+     Test Automation Training and Coaching: https://www.serenity-dojo.com                
+     Commercial Support: https://www.serenity-dojo.com/serenity-bdd-enterprise-support   
+     Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+    -------------------------------------------------------------------------------------
+
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Inicio de sesion de usuario
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Inicio de sesion de usuario
+
+com.automatizacion.runners.LoginUsuarioRunner > Inicio de sesion de usuario.Iniciar sesion como cliente registrado STANDARD_ERROR
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - 
+      _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+     |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+       | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+       |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+    Iniciar sesion como cliente registrado(inicio-de-sesion-de-usuario;iniciar-sesion-como-cliente-registrado)
+    --------------------------------------------------------------------------------
+
+com.automatizacion.runners.LoginUsuarioRunner > Inicio de sesion de usuario.Iniciar sesion como cliente registrado STANDARD_OUT
+
+    [1mScenario:[22m Iniciar sesion como cliente registrado                         [90m# src/test/resources/features/login/login_usuario.feature:3[39m
+
+com.automatizacion.runners.LoginUsuarioRunner > Inicio de sesion de usuario.Iniciar sesion como cliente registrado STANDARD_ERROR
+    [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+    [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+    jun 04, 2026 9:17:03 A.�M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    ADVERTENCIA: Unable to find an exact match for CDP version 148, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 148
+
+com.automatizacion.runners.LoginUsuarioRunner > Inicio de sesion de usuario.Iniciar sesion como cliente registrado STANDARD_OUT
+      [32m✔[39m [32m[1mGiven [22mque el cliente se encuentra en la pantalla de inicio de sesion[39m [90m# com.automatizacion.stepdefinitions.LoginUsuarioStepDefinitions.queElClienteSeEncuentraEnLaPantallaDeInicioDeSesion()[39m
+      [31m✘[39m [31m[1mWhen [22minicia sesion con sus credenciales validas[39m                      [90m# com.automatizacion.stepdefinitions.LoginUsuarioStepDefinitions.iniciaSesionConSusCredencialesValidas()[39m
+            [31morg.opentest4j.AssertionFailedError: [39m
+            [31mExpected: an element that is visible[39m
+            [31m     but: no matching element found by [campo correo electronico located with: id: email][39m
+            [31m	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:39)[39m
+            [31m	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:33)[39m
+            [31m	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)[39m
+            [31m	at net.serenitybdd.screenplay.waits.WaitUntilBuilder$1.performAs(WaitUntilBuilder.java:34)[39m
+            [31m	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)[39m
+            [31m	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)[39m
+            [31m	at net.serenitybdd.screenplay.Actor.performSilently(Actor.java:254)[39m
+            [31m	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:211)[39m
+            [31m	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)[39m
+            [31m	at com.automatizacion.tasks.IniciarSesion.performAs(IniciarSesion.java:27)[39m
+            [31m	at com.automatizacion.tasks.IniciarSesion$ByteBuddy$evWDxQC5.performAs$accessor$mqyf12S1(Unknown Source)[39m
+            [31m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[39m
+            [31m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)[39m
+            [31m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[39m
+            [31m	at java.base/java.lang.reflect.Method.invoke(Method.java:569)[39m
+            [31m	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:550)[39m
+            [31m	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:530)[39m
+            [31m	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:492)[39m
+            [31m	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:234)[39m
+            [31m	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)[39m
+            [31m	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)[39m
+            [31m	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)[39m
+            [31m	at com.automatizacion.tasks.IniciarSesion$ByteBuddy$evWDxQC5.performAs(Unknown Source)[39m
+            [31m	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)[39m
+            [31m	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)[39m
+            [31m	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)[39m
+            [31m	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)[39m
+            [31m	at com.automatizacion.stepdefinitions.LoginUsuarioStepDefinitions.iniciaSesionConSusCredencialesValidas(LoginUsuarioStepDefinitions.java:33)[39m
+            [31m	at ✽.inicia sesion con sus credenciales validas(file:///C:/finalFE2026/src/test/resources/features/login/login_usuario.feature:5)[39m
+      [36m↷[39m [36m[1mThen [22mdeberia visualizar el dashboard del cliente autenticado[39m         [90m# com.automatizacion.stepdefinitions.LoginUsuarioStepDefinitions.deberiaVisualizarElPanelPrincipalDelCliente()[39m
+
+com.automatizacion.runners.LoginUsuarioRunner > Inicio de sesion de usuario.Iniciar sesion como cliente registrado STANDARD_ERROR
+    [Test worker] ERROR net.thucydides.model.logging.ConsoleLoggingListener - 
+      _____   ___   ___   _____     ___     _     ___   _      ___   ___  
+     |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
+       | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
+       |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
+
+    Iniciar sesion como cliente registrado
+    -----------------------------------------------------------------------
+    [Test worker] ERROR net.thucydides.model.logging.ConsoleLoggingListener -     Test failed at step: When inicia sesion con sus credenciales validas
+    [Test worker] ERROR net.thucydides.model.logging.ConsoleLoggingListener -     Expected: an element that is visible but: no matching element found by [campo correo electronico located with: id: email]
+
+com.automatizacion.runners.LoginUsuarioRunner > Inicio de sesion de usuario.Iniciar sesion como cliente registrado FAILED
+    org.opentest4j.AssertionFailedError: 
+    Expected: an element that is visible
+         but: no matching element found by [campo correo electronico located with: id: email]
+        at app//net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:39)
+        at app//net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:33)
+        at app//net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+        at app//net.serenitybdd.screenplay.waits.WaitUntilBuilder$1.performAs(WaitUntilBuilder.java:34)
+        at app//net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+        at app//net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+        at app//net.serenitybdd.screenplay.Actor.performSilently(Actor.java:254)
+        at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:211)
+        at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+        at app//com.automatizacion.tasks.IniciarSesion.performAs(IniciarSesion.java:27)
+        at app//com.automatizacion.tasks.IniciarSesion$ByteBuddy$evWDxQC5.performAs$accessor$mqyf12S1(Unknown Source)
+        at java.base@17.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base@17.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+        at java.base@17.0.17/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base@17.0.17/java.lang.reflect.Method.invoke(Method.java:569)
+        at app//net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:550)
+        at app//net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:530)
+        at app//net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:492)
+        at app//net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:234)
+        at app//net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
+        at app//net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
+        at app//net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+        at app//com.automatizacion.tasks.IniciarSesion$ByteBuddy$evWDxQC5.performAs(Unknown Source)
+        at app//net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+        at app//net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+        at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
+        at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+        at app//com.automatizacion.stepdefinitions.LoginUsuarioStepDefinitions.iniciaSesionConSusCredencialesValidas(LoginUsuarioStepDefinitions.java:33)
+        at ?.inicia sesion con sus credenciales validas(file:///C:/finalFE2026/src/test/resources/features/login/login_usuario.feature:5)
+
+Gradle Test Executor 11 finished executing tests.
+
+> Task :test FAILED
+
+1 test completed, 1 failed
+Finished generating test XML results (0.084 secs) into: C:\finalFE2026\build\test-results\test
+Generating HTML test report...
+Finished generating test html results (0.007 secs) into: C:\finalFE2026\build\reports\tests\test
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///C:/finalFE2026/build/reports/tests/test/index.html
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 35s
+4 actionable tasks: 4 executed
+Watched directory hierarchies: [C:\finalFE2026]

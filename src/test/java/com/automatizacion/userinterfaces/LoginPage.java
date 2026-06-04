@@ -14,9 +14,8 @@ public class LoginPage {
                     .located(By.id("password"));
 
     public static final Target LOGIN_BUTTON =
-            Target.the("boton iniciar sesion")
+            Target.the("boton ingresar")
                     .located(By.cssSelector("button[type='submit']"));
 
-    private LoginPage() {
-    }
+    private LoginPage() {}
 }

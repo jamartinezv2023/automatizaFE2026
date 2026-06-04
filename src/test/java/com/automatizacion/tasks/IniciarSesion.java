@@ -5,8 +5,11 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class IniciarSesion implements Task {
 
@@ -21,8 +24,11 @@ public class IniciarSesion implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                WaitUntil.the(LoginPage.EMAIL, isVisible()).forNoMoreThan(30).seconds(),
+                WaitUntil.the(LoginPage.EMAIL, isEnabled()).forNoMoreThan(30).seconds(),
                 Enter.theValue(usuario).into(LoginPage.EMAIL),
                 Enter.theValue(clave).into(LoginPage.PASSWORD),
+                WaitUntil.the(LoginPage.LOGIN_BUTTON, isEnabled()).forNoMoreThan(10).seconds(),
                 Click.on(LoginPage.LOGIN_BUTTON)
         );
     }
