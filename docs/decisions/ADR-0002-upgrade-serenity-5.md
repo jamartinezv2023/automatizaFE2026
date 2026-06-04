@@ -1,37 +1,18 @@
-# ADR-0002
-
-## Título
-Migración de Serenity 3.3.4 a Serenity 5.3.10
+# ADR-0002: Migración a Serenity 5.3.10
 
 ## Estado
 Aceptado
 
 ## Contexto
-
-Se detectó incompatibilidad entre:
-
-- Serenity 3.3.4
-- Selenium 4.4.0
-- Chrome 148
-
-Las pruebas E2E fallan durante la creación del ChromeDriver.
+Serenity 3.3.4 resuelve Selenium 4.4.0, incompatible con Chrome 148.
 
 ## Evidencia
-
-Laboratorio técnico realizado en rama feature/upgrade-serenity.
-
-Resultado:
-
-Serenity 5.3.10 incorpora Selenium 4.41.0.
+El laboratorio técnico confirmó que Serenity 5.3.10 resuelve Selenium 4.41.0.
 
 ## Decisión
-
 Migrar el proyecto a Serenity 5.3.10.
 
 ## Consecuencias
-
-- Compatibilidad con navegadores modernos.
-- Eliminación de deuda técnica.
-- Mejor soporte para CI/CD.
-- Mejor integración con Selenium Manager.
-
+- Mayor compatibilidad con navegadores modernos.
+- Mejor soporte de Selenium Manager.
+- Mejor base para CI/CD y DevOps.
