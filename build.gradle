@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'idea'
+    id 'org.sonarqube' version '5.1.0.4882'
 }
 
 group = 'com.automatizacion'
