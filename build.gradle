@@ -36,3 +36,11 @@ tasks.register('aggregate') {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
+
+sonar {
+    properties {
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.projectKey", "jamartinezv2023_automatizaFE2026"
+        property "sonar.organization", "jamartinezv2023"
+    }
+}
