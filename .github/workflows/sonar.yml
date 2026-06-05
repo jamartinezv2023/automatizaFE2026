@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: 21
 
       - name: Grant permissions
         run: chmod +x gradlew
@@ -31,6 +31,9 @@ jobs:
         run: ./gradlew clean testClasses
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v5
+        uses: SonarSource/sonarqube-scan-action@v6
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.scanner.skipJreProvisioning=true
