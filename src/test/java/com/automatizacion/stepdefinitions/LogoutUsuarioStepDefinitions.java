@@ -3,22 +3,20 @@ package com.automatizacion.stepdefinitions;
 import com.automatizacion.questions.VisualizaLogin;
 import com.automatizacion.tasks.CerrarSesion;
 import com.automatizacion.tasks.RegistrarUsuario;
+import com.automatizacion.userinterfaces.DashboardPage;
+import com.automatizacion.userinterfaces.LoginPage;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.UUID;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static org.hamcrest.Matchers.equalTo;
-
-import com.automatizacion.userinterfaces.DashboardPage;
-import com.automatizacion.userinterfaces.LoginPage;
 
 public class LogoutUsuarioStepDefinitions {
 
@@ -29,8 +27,9 @@ public class LogoutUsuarioStepDefinitions {
 
     @Given("que el cliente se registro exitosamente")
     public void queElClienteSeRegistroExitosamente() {
-        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
-        String email = "logout" + timestamp + "@test.com";
+        String email = "logout-" + UUID.randomUUID() + "@test.com";
+
+        System.out.println("EMAIL LOGOUT GENERADO => " + email);
 
         theActorCalled("Cliente").attemptsTo(
                 Open.url("https://logistica-frontend-54fk.onrender.com/registro"),
