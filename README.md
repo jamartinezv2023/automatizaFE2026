@@ -7,59 +7,159 @@
 
 Proyecto de automatización E2E para el sistema LogiTrack, construido con Serenity BDD, Cucumber, Screenplay Pattern, Gradle y Java.
 
-## Objetivo
+## Resumen ejecutivo
 
-Validar flujos críticos del sistema de tracking logístico mediante pruebas E2E mantenibles, trazables y ejecutables dentro de una estrategia profesional de aseguramiento de calidad.
+Este repositorio implementa una estrategia profesional de automatización E2E basada en:
 
-## Stack
-
-- Java 17
-- Gradle Wrapper
 - Serenity BDD
-- Cucumber
 - Screenplay Pattern
-- JUnit
+- Cucumber BDD
+- Java 17
+- Gradle
 - GitHub Actions
-- SonarQube Cloud
+- SonarCloud
 
-## Flujos E2E implementados
+El objetivo no es automatizar todo de forma artificial, sino automatizar únicamente funcionalidades observables, repetibles, trazables y estables del dominio LogiTrack.
 
-- Registro de cliente
-- Dashboard cliente
-- Cierre de sesión desde dashboard
+## Dashboard de calidad
 
-## Hallazgos documentados
+| Indicador | Estado |
+|---|---|
+| Build local | ✅ Estable |
+| Compilación Gradle | ✅ Estable |
+| Suite estable | ✅ Implementada |
+| Trazabilidad QA | ✅ Implementada |
+| Matriz INVEST | ✅ Implementada |
+| Gobierno FIRST / AAA | ✅ Documentado |
+| SonarCloud | ⚠️ En estabilización |
+| Cobertura funcional estable | 20% |
+| Hallazgos documentados | ✅ Sí |
 
-- Login directo no redirecciona al dashboard en automatización.
-- Ver: `docs/hallazgos/login-no-redirecciona.md`
+## Suite estable
 
-## Ejecución local
-
-Compilar pruebas:
-
-```bash
-./gradlew clean testClasses
-```
-
-Ejecutar pruebas activas:
+La suite estable se ejecuta mediante:
 
 ```bash
 ./gradlew clean test aggregate
 ```
 
-## Reportes
-
-Cuando se ejecutan pruebas E2E con Serenity, los reportes se generan en:
+Runner principal:
 
 ```text
-target/site/serenity
+StableSuiteRunner
 ```
 
-## Calidad
+Filtro lógico:
 
-El proyecto usa SonarQube Cloud para análisis estático, Quality Gate y seguimiento de seguridad.
+```text
+@stable and not @blocked and not @wip
+```
 
-## Estructura principal
+Escenarios estables actuales:
+
+| Escenario | Feature | Estado |
+|---|---|---|
+| Visualizar pantalla de rastreo de envíos | rastreo_guia.feature | ✅ Estable |
+| Enviar formulario de registro con datos válidos | registro_usuario.feature | ✅ Parcial estable |
+
+## Cobertura del dominio
+
+| Área | Estado | Cobertura estable |
+|---|---|---:|
+| Autenticación | Parcial | 25% |
+| Rastreo | Parcial | 33% |
+| Envíos | Pendiente | 0% |
+| Historial | Pendiente | 0% |
+| Notificaciones | Pendiente | 0% |
+| Total estimado | Parcial | 20% |
+
+La cobertura estable es baja porque el sistema bajo prueba todavía no expone todos los flujos del dominio con comportamiento observable, repetible y automatizable.
+
+## Hallazgos documentados
+
+| Hallazgo | Estado |
+|---|---|
+| Login directo no redirecciona al dashboard | Documentado |
+| Registro no autentica automáticamente | Documentado |
+| Logout depende de sesión estable | Bloqueado |
+| Ruta real de rastreo es `/rastrear` | Resuelto |
+| Doble indexación SonarCloud | Resuelto |
+
+Documentación relacionada:
+
+```text
+docs/hallazgos/
+docs/dominio/
+docs/trazabilidad/
+docs/qa/
+```
+
+## Estrategia de ejecución
+
+El proyecto clasifica escenarios mediante tags Cucumber:
+
+| Tag | Uso |
+|---|---|
+| @stable | Escenarios deterministas y ejecutables |
+| @wip | Escenarios en construcción |
+| @blocked | Escenarios bloqueados por hallazgos |
+| @discovery | Escenarios exploratorios |
+| @happy | Camino feliz |
+| @exception | Camino excepcional |
+
+Validación rápida:
+
+```bash
+./gradlew clean testClasses
+```
+
+Validación E2E estable:
+
+```bash
+./gradlew clean test aggregate
+```
+
+## Trazabilidad QA
+
+La trazabilidad formal se encuentra en:
+
+```text
+docs/trazabilidad/
+```
+
+Incluye:
+
+| Archivo | Propósito |
+|---|---|
+| matriz-requisito-feature.md | Relaciona dominio y features Gherkin |
+| matriz-feature-scenario.md | Relaciona features con escenarios |
+| matriz-scenario-screenplay.md | Relaciona escenarios con implementación Screenplay |
+| matriz-cobertura-dominio.md | Resume cobertura medible del dominio |
+
+Cadena de trazabilidad:
+
+```text
+Dominio
+  -> Requisito
+  -> Feature
+  -> Escenario
+  -> Step Definition
+  -> Task
+  -> Question
+  -> Reporte Serenity
+```
+
+## Arquitectura Screenplay
+
+```text
+Actor
+  -> Task
+  -> Interaction
+  -> Question
+  -> Assertion
+```
+
+Estructura principal:
 
 ```text
 src/test/java/com/automatizacion
@@ -70,13 +170,87 @@ src/test/java/com/automatizacion
 └── userinterfaces
 ```
 
-## Convenciones
+## Principios aplicados
 
-Este proyecto sigue:
+### INVEST
 
-- Screenplay Pattern
-- BDD con Gherkin
-- Principios FIRST
-- Patrón AAA
-- Estrategia de pruebas basada en Pirámide de Cohn
-- Documentación de calidad alineada con IEEE 730
+Cada historia candidata a automatización debe ser:
+
+- Independiente
+- Negociable
+- Valiosa
+- Estimable
+- Pequeña
+- Testeable
+
+### FIRST
+
+Cada escenario automatizado debe ser:
+
+- Fast
+- Independent
+- Repeatable
+- Self-validating
+- Timely
+
+### AAA
+
+Cada escenario debe respetar:
+
+```text
+Given  -> Arrange
+When   -> Act
+Then   -> Assert
+```
+
+## Ejecución local
+
+Compilar pruebas:
+
+```bash
+./gradlew clean testClasses
+```
+
+Ejecutar suite estable:
+
+```bash
+./gradlew clean test aggregate
+```
+
+## Reportes
+
+Los reportes Serenity se generan en:
+
+```text
+target/site/serenity
+```
+
+Los reportes Gradle se generan en:
+
+```text
+build/reports/tests/test/index.html
+```
+
+## Roadmap
+
+### v1.6.x
+
+- Consolidar SonarCloud.
+- Ajustar pipeline CI con suite estable.
+
+### v1.7.x
+
+- Explorar contrato funcional de rastreo por guía.
+
+### v1.8.x
+
+- Evaluar automatización de login con evidencia HTTP.
+
+### v2.x
+
+- Ampliar cobertura funcional cuando el dominio exponga flujos estables.
+
+## Estado del proyecto
+
+Este proyecto prioriza calidad, trazabilidad y estabilidad sobre cantidad de pruebas.  
+La suite estable representa únicamente escenarios que cumplen criterios de automatización robusta.
