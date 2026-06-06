@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'org.sonarqube' version '5.1.0.4882'
+}
+
+group = 'com.automatizacion'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-junit:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
+
+    testImplementation "junit:junit:${junitVersion}"
+    testImplementation "org.hamcrest:hamcrest:${hamcrestVersion}"
+    testImplementation "org.slf4j:slf4j-simple:${slf4jVersion}"
+}
+
+test {
+    useJUnit()
+    systemProperties System.getProperties()
+    finalizedBy 'aggregate'
+}
+
+tasks.register('aggregate') {
+    dependsOn test
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+sonar {
+    properties {
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.projectKey", "jamartinezv2023_automatizaFE2026"
+        property "sonar.organization", "jamartinezv2023"
+    }
+}

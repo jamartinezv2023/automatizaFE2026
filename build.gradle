@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'idea'
     id 'org.sonarqube' version '5.1.0.4882'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.2.34'
 }
 
 group = 'com.automatizacion'
@@ -27,10 +28,6 @@ test {
     useJUnit()
     systemProperties System.getProperties()
     finalizedBy 'aggregate'
-}
-
-tasks.register('aggregate') {
-    dependsOn test
 }
 
 tasks.withType(JavaCompile).configureEach {

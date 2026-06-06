@@ -1,0 +1,26 @@
+> Task :clean
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :compileTestJava
+C:\finalFE2026\src\test\java\com\automatizacion\runners\RastreoGuiaRunner.java:9: warning: [removal] CucumberWithSerenity in net.serenitybdd.cucumber has been deprecated and marked for removal
+@RunWith(CucumberWithSerenity.class)
+         ^
+C:\finalFE2026\src\test\java\com\automatizacion\runners\RegistroUsuarioRunner.java:9: warning: [removal] CucumberWithSerenity in net.serenitybdd.cucumber has been deprecated and marked for removal
+@RunWith(CucumberWithSerenity.class)
+         ^
+C:\finalFE2026\src\test\java\com\automatizacion\runners\StableSuiteRunner.java:7: warning: [removal] CucumberWithSerenity in net.serenitybdd.cucumber has been deprecated and marked for removal
+@RunWith(CucumberWithSerenity.class)
+         ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+3 warnings
+
+> Task :processTestResources
+> Task :testClasses
+> Task :test
+> Task :aggregate
+
+BUILD SUCCESSFUL in 15s
+4 actionable tasks: 4 executed

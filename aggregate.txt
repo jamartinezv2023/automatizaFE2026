@@ -1,0 +1,221 @@
+Initialized native services in: C:\Users\iesaf\.gradle\native
+Initialized jansi services in: C:\Users\iesaf\.gradle\native
+Received JVM installation metadata from 'C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot': {JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot, JAVA_VERSION=21.0.10, JAVA_VENDOR=Eclipse Adoptium, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.10+7-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.10+7-LTS, VM_VENDOR=Eclipse Adoptium, OS_ARCH=amd64}
+The client will now receive all logging from the daemon (pid: 26736). The daemon log file: C:\Users\iesaf\.gradle\daemon\7.6.4\daemon-26736.out.log
+Starting 5th build in daemon [uptime: 1 hrs 14 mins 7.553 secs, performance: 100%]
+Using 8 worker leases.
+Now considering [C:\finalFE2026] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\finalFE2026\settings.gradle'.
+Projects loaded. Root project using build file 'C:\finalFE2026\build.gradle'.
+Included projects: [root project 'automatizaFE2026']
+
+> Configure project :
+Evaluating root project 'automatizaFE2026' using build file 'C:\finalFE2026\build.gradle'.
+All projects evaluated.
+Task name matched 'aggregate'
+Selected primary task 'aggregate' from project :
+Tasks to be executed: [task ':compileJava', task ':processResources', task ':classes', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':aggregate']
+Tasks that were excluded: []
+Resolve mutations for :compileJava (Thread[#549,Execution worker,5,main]) started.
+:compileJava (Thread[#549,Execution worker,5,main]) started.
+
+> Task :compileJava NO-SOURCE
+Skipping task ':compileJava' as it has no source files and no previous output files.
+Resolve mutations for :processResources (Thread[#549,Execution worker,5,main]) started.
+:processResources (Thread[#549,Execution worker,5,main]) started.
+
+> Task :processResources NO-SOURCE
+Skipping task ':processResources' as it has no source files and no previous output files.
+Resolve mutations for :classes (Thread[#549,Execution worker,5,main]) started.
+:classes (Thread[#549,Execution worker,5,main]) started.
+
+> Task :classes UP-TO-DATE
+Skipping task ':classes' as it has no actions.
+Resolve mutations for :compileTestJava (Thread[#549,Execution worker,5,main]) started.
+:compileTestJava (Thread[#549,Execution worker,5,main]) started.
+
+> Task :compileTestJava UP-TO-DATE
+Caching disabled for task ':compileTestJava' because:
+  Build cache is disabled
+Skipping task ':compileTestJava' as it is up-to-date.
+Resolve mutations for :processTestResources (Thread[#549,Execution worker,5,main]) started.
+:processTestResources (Thread[#549,Execution worker,5,main]) started.
+
+> Task :processTestResources UP-TO-DATE
+Caching disabled for task ':processTestResources' because:
+  Build cache is disabled
+Skipping task ':processTestResources' as it is up-to-date.
+Resolve mutations for :testClasses (Thread[#549,Execution worker,5,main]) started.
+:testClasses (Thread[#549,Execution worker,5,main]) started.
+
+> Task :testClasses UP-TO-DATE
+Skipping task ':testClasses' as it has no actions.
+Resolve mutations for :test (Thread[#549,Execution worker,5,main]) started.
+:test (Thread[#549,Execution worker,5,main]) started.
+Gradle Test Executor 4 started executing tests.
+
+> Task :test
+Caching disabled for task ':test' because:
+  Build cache is disabled
+Task ':test' is not up-to-date because:
+  Value of input property 'systemProperties' has changed for task ':test'
+Starting process 'Gradle Test Executor 4'. Working directory: C:\finalFE2026 Command: C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin\java.exe -Dfile.separator=\ -Djava.class.path=C:\Users\iesaf\.gradle\wrapper\dists\gradle-7.6.4-bin\eq47ircvekz8t0m2yd28ebfsh\gradle-7.6.4\lib\gradle-launcher-7.6.4.jar -Djava.class.version=65.0 -Djava.home=C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot -Djava.library.path=C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\iesaf\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\iesaf\bin;C:\Users\iesaf\AppData\Local\Programs\Python\Python314\Scripts;C:\Users\iesaf\AppData\Local\Programs\Python\Python314;C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\Gradle\gradle-9.2.1\bin;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files\Amazon\AWSCLIV2;C:\Program Files\Apache\Maven\apache-maven-3.9.9\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-h;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\PostgreSQL\17\bin;C:\ProgramData\chocolatey\bin;C:\Terraform;C:\Users\iesaf\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\iesaf\AppData\Roaming\npm;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\laragon\bin\php\php-8.3.30-Win32-vs16-x64;C:\laragon\bin\mysql\mysql-8.4.3-winx64\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\wbin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.;C:\Program Files\Amazon\AWSCLIV2;C:\Program Files\Eclipse Adoptium\jdk-17.0.11.9-h;C:\Terraform;C:\Terraform;C:\Users\iesaf\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\Users\iesaf\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;. -Djava.runtime.name=OpenJDK Runtime Environment -Djava.runtime.version=21.0.10+7-LTS -Djava.specification.name=Java Platform API Specification -Djava.specification.vendor=Oracle Corporation -Djava.specification.version=21 -Djava.vendor=Eclipse Adoptium -Djava.vendor.url=https://adoptium.net/ -Djava.vendor.url.bug=https://github.com/adoptium/adoptium-support/issues -Djava.vendor.version=Temurin-21.0.10+7 -Djava.version=21.0.10 -Djava.version.date=2026-01-20 -Djava.vm.compressedOopsMode=32-bit -Djava.vm.info=mixed mode, sharing -Djava.vm.name=OpenJDK 64-Bit Server VM -Djava.vm.specification.name=Java Virtual Machine Specification -Djava.vm.specification.vendor=Oracle Corporation -Djava.vm.specification.version=21 -Djava.vm.vendor=Eclipse Adoptium -Djava.vm.version=21.0.10+7-LTS -Djdk.debug=release -Dlibrary.jansi.path=C:\Users\iesaf\.gradle\native\jansi\1.18\windows64 -Dline.separator=
+ -Dnative.encoding=Cp1252 -Dorg.gradle.appname=gradlew -Dorg.gradle.internal.worker.tmpdir=C:\finalFE2026\build\tmp\test\work -Dorg.gradle.native=false -Dos.arch=amd64 -Dos.name=Windows 10 -Dos.version=10.0 -Dpath.separator=; -Dstderr.encoding=Cp1252 -Dstdout.encoding=Cp1252 -Dsun.arch.data.model=64 -Dsun.boot.library.path=C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin -Dsun.cpu.endian=little -Dsun.cpu.isalist=amd64 -Dsun.io.unicode.encoding=UnicodeLittle -Dsun.java.command=org.gradle.launcher.daemon.bootstrap.GradleDaemon 7.6.4 -Dsun.java.launcher=SUN_STANDARD -Dsun.jnu.encoding=Cp1252 -Dsun.management.compiler=HotSpot 64-Bit Tiered Compilers -Dsun.os.patch.level -Duser.dir=C:\finalFE2026 -Duser.home=C:\Users\iesaf -Duser.name=jose.martinez7 -Duser.script -Duser.timezone=America/Bogota @C:\Users\iesaf\.gradle\.tmp\gradle-worker-classpath14069501236155698561txt -Xmx512m -Dfile.encoding=UTF-8 -Djava.io.tmpdir=C:\Users\iesaf\AppData\Local\Temp\ -Duser.country=ES -Duser.language=es -Duser.variant -ea worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 4'
+Successfully started process 'Gradle Test Executor 4'
+
+com.automatizacion.runners.StableSuiteRunner STANDARD_ERROR
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - 
+
+    -------------------------------------------------------------------------------------
+         _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+        /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+       |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+        \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+    .----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+    |_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+     News and tutorials at https://serenity-bdd.info                                     
+     Documentation at https://serenity-bdd.github.io                                     
+     Test Automation Training and Coaching: https://www.serenity-dojo.com                
+     Commercial Support: https://www.serenity-dojo.com/serenity-bdd-enterprise-support   
+     Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+    -------------------------------------------------------------------------------------
+
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Autenticacion de usuarios
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Gestion de envios logisticos
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Historial y notificaciones del envio
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Rastreo de envios
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Inicio de sesion de usuario
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Cierre de sesion
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Rastreo de envios por guia
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Registro de usuarios
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Rastreo de envios por guia
+
+com.automatizacion.runners.StableSuiteRunner > Rastreo de envios por guia.Visualizar pantalla de rastreo de envios STANDARD_ERROR
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - 
+      _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+     |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+       | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+       |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+    Visualizar pantalla de rastreo de envios(rastreo-de-envios-por-guia;visualizar-pantalla-de-rastreo-de-envios)
+    --------------------------------------------------------------------------------
+
+com.automatizacion.runners.StableSuiteRunner > Rastreo de envios por guia.Visualizar pantalla de rastreo de envios STANDARD_OUT
+
+    @stable @rastreo @happy
+    [1mScenario:[22m Visualizar pantalla de rastreo de envios             [90m# src/test/resources/features/rastreo/rastreo_guia.feature:4[39m
+
+com.automatizacion.runners.StableSuiteRunner > Rastreo de envios por guia.Visualizar pantalla de rastreo de envios STANDARD_ERROR
+    [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+    [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+    jun 06, 2026 11:13:49 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    ADVERTENCIA: Unable to find an exact match for CDP version 148, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 148
+
+com.automatizacion.runners.StableSuiteRunner > Rastreo de envios por guia.Visualizar pantalla de rastreo de envios STANDARD_OUT
+      [32m?[39m [32m[1mGiven [22mque el visitante se encuentra en la pagina principal[39m [90m# com.automatizacion.stepdefinitions.RastreoGuiaStepDefinitions.queElVisitanteSeEncuentraEnLaPaginaPrincipal()[39m
+      [32m?[39m [32m[1mWhen [22mnavega a la opcion de rastrear envio[39m                  [90m# com.automatizacion.stepdefinitions.RastreoGuiaStepDefinitions.navegaALaOpcionDeRastrearEnvio()[39m
+    RASTREO URL ACTUAL => https://logistica-frontend-54fk.onrender.com/rastrear
+    RASTREO BODY ACTUAL => LogiTrack
+    Inicio
+    Rastrear envío
+    Crear cuenta
+    Ingresar
+    Seguimiento en tiempo real de tus envíos
+    Sistema de tracking logístico con cobertura completa en Antioquia. Consulta el estado de tus paquetes en cualquier momento.
+    Rastrear
+      [32m?[39m [32m[1mThen [22mdeberia visualizar la pantalla de rastreo[39m             [90m# com.automatizacion.stepdefinitions.RastreoGuiaStepDefinitions.deberiaVisualizarLaPantallaDeRastreo()[39m
+
+com.automatizacion.runners.StableSuiteRunner > Rastreo de envios por guia.Visualizar pantalla de rastreo de envios STANDARD_ERROR
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - 
+      _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+     |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+       | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+       |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+    Visualizar pantalla de rastreo de envios
+    ----------------------------------------------------------------------
+
+com.automatizacion.runners.StableSuiteRunner STANDARD_ERROR
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - Test Suite Started: Registro de usuarios
+
+com.automatizacion.runners.StableSuiteRunner > Registro de usuarios.Enviar formulario de registro con datos validos STANDARD_ERROR
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - 
+      _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+     |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+       | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+       |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+    Enviar formulario de registro con datos validos(registro-de-usuarios;enviar-formulario-de-registro-con-datos-validos)
+    --------------------------------------------------------------------------------
+
+com.automatizacion.runners.StableSuiteRunner > Registro de usuarios.Enviar formulario de registro con datos validos STANDARD_OUT
+
+    @stable @registro @happy
+    [1mScenario:[22m Enviar formulario de registro con datos validos           [90m# src/test/resources/features/registro/registro_usuario.feature:4[39m
+
+com.automatizacion.runners.StableSuiteRunner > Registro de usuarios.Enviar formulario de registro con datos validos STANDARD_ERROR
+    [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+    [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [remote-allow-origins=*], extensions: []}}
+    jun 06, 2026 11:13:53 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    ADVERTENCIA: Unable to find an exact match for CDP version 148, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 148
+
+com.automatizacion.runners.StableSuiteRunner > Registro de usuarios.Enviar formulario de registro con datos validos STANDARD_OUT
+      [32m?[39m [32m[1mGiven [22mque el visitante se encuentra en la pantalla de registro[39m  [90m# com.automatizacion.stepdefinitions.RegistroUsuarioStepDefinitions.queElVisitanteSeEncuentraEnLaPantallaDeRegistro()[39m
+    EMAIL REGISTRO GENERADO => cliente-914bca15-86a7-46a1-ac84-e393ec647670@test.com
+      [32m?[39m [32m[1mWhen [22mregistra un nuevo cliente[39m                                  [90m# com.automatizacion.stepdefinitions.RegistroUsuarioStepDefinitions.registraUnNuevoCliente()[39m
+    URL FINAL REGISTRO => https://logistica-frontend-54fk.onrender.com/registro
+    BODY FINAL REGISTRO => LogiTrack
+    Inicio
+    Rastrear envío
+    LogiTrack
+    Crear cuenta
+    Te registras como cliente. Si necesitas rol de operador, un administrador lo asignará después.
+    Correo electrónico
+    Contraseña
+    Nombre
+    Apellido (opcional)
+    Creando cuenta…
+    ¿Ya tienes cuenta? Iniciar sesión
+    ? Volver al inicio
+    LogiTrack
+    Sistema de tracking logístico con cobertura en Antioquia, Colombia.
+    SERVICIOS
+    Rastreo de envíos
+    Envío de paquetes
+    COBERTURA
+    Servicio disponible en municipios seleccionados de Antioquia, Colombia.
+    CONTACTO
+    info@logitrack.com
+    01 8000 123 456
+    © 2026 LogiTrack. Todos los derechos reservados.
+      [32m?[39m [32m[1mThen [22mdeberia permanecer en el flujo de registro o autenticacion[39m [90m# com.automatizacion.stepdefinitions.RegistroUsuarioStepDefinitions.deberiaPermanecerEnElFlujoDeRegistroOAutenticacion()[39m
+
+com.automatizacion.runners.StableSuiteRunner > Registro de usuarios.Enviar formulario de registro con datos validos STANDARD_ERROR
+    [Test worker] INFO net.thucydides.model.logging.ConsoleLoggingListener - 
+      _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+     |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+       | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+       |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+    Enviar formulario de registro con datos validos
+    ----------------------------------------------------------------------
+
+Gradle Test Executor 4 finished executing tests.
+
+> Task :test
+Finished generating test XML results (0.029 secs) into: C:\finalFE2026\build\test-results\test
+Generating HTML test report...
+Finished generating test html results (0.018 secs) into: C:\finalFE2026\build\reports\tests\test
+Resolve mutations for :aggregate (Thread[#549,Execution worker,5,main]) started.
+:aggregate (Thread[#549,Execution worker,5,main]) started.
+
+> Task :aggregate
+Skipping task ':aggregate' as it has no actions.
+
+BUILD SUCCESSFUL in 15s
+3 actionable tasks: 1 executed, 2 up-to-date
+Watched directory hierarchies: [C:\finalFE2026]
