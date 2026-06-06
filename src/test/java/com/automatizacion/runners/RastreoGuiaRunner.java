@@ -3,7 +3,9 @@ package com.automatizacion.runners;
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
+@Ignore("Ejecutar mediante StableSuiteRunner")
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features/rastreo/rastreo_guia.feature",
