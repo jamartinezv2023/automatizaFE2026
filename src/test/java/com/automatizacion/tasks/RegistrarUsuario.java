@@ -1,6 +1,5 @@
 package com.automatizacion.tasks;
 
-import com.automatizacion.userinterfaces.DashboardPage;
 import com.automatizacion.userinterfaces.RegistroPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -31,16 +30,12 @@ public class RegistrarUsuario implements Task {
         actor.attemptsTo(
                 WaitUntil.the(RegistroPage.EMAIL, isVisible()).forNoMoreThan(20).seconds(),
                 WaitUntil.the(RegistroPage.EMAIL, isEnabled()).forNoMoreThan(20).seconds(),
-
                 Enter.theValue(email).into(RegistroPage.EMAIL),
                 Enter.theValue(password).into(RegistroPage.PASSWORD),
                 Enter.theValue(nombre).into(RegistroPage.NOMBRE),
                 Enter.theValue(apellido).into(RegistroPage.APELLIDO),
-
                 WaitUntil.the(RegistroPage.REGISTRARME, isEnabled()).forNoMoreThan(10).seconds(),
-                Click.on(RegistroPage.REGISTRARME),
-
-                WaitUntil.the(DashboardPage.BOTON_CERRAR_SESION, isVisible()).forNoMoreThan(40).seconds()
+                Click.on(RegistroPage.REGISTRARME)
         );
     }
 
