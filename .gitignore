@@ -15,3 +15,8 @@ dependencias.txt
 src/test/resources/data/*.local.json
 src/test/resources/data/*real*.json
 src/test/resources/data/*secret*.json
+
+# Local E2E secrets and seed data
+src/test/resources/data/e2e-ci-secrets.local.json
+src/test/resources/data/seed-data.local.json
+src/test/resources/data/*.secrets.json
