@@ -1,0 +1,48 @@
+{
+  "environment": {
+    "frontendUrl": "https://logistica-frontend-54fk.onrender.com",
+    "type": "e2e"
+  },
+  "users": {
+    "client": {
+      "emailRef": "E2E_CLIENT_EMAIL",
+      "passwordRef": "E2E_CLIENT_PASSWORD",
+      "role": "CLIENTE",
+      "status": "pending"
+    },
+    "operator": {
+      "emailRef": "E2E_OPERATOR_EMAIL",
+      "passwordRef": "E2E_OPERATOR_PASSWORD",
+      "role": "OPERADOR",
+      "status": "pending"
+    },
+    "admin": {
+      "emailRef": "E2E_ADMIN_EMAIL",
+      "passwordRef": "E2E_ADMIN_PASSWORD",
+      "role": "ADMIN",
+      "status": "pending"
+    }
+  },
+  "trackingGuides": {
+    "existing": {
+      "valueRef": "E2E_TRACKING_GUIDE_EXISTING",
+      "expectedState": "valid-visible-state",
+      "status": "pending"
+    },
+    "inTransit": {
+      "valueRef": "E2E_TRACKING_GUIDE_IN_TRANSIT",
+      "expectedState": "en transito",
+      "status": "pending"
+    },
+    "delivered": {
+      "valueRef": "E2E_TRACKING_GUIDE_DELIVERED",
+      "expectedState": "entregado",
+      "status": "pending"
+    },
+    "notFound": {
+      "valueRef": "E2E_TRACKING_GUIDE_NOT_FOUND",
+      "expectedState": "no encontrada",
+      "status": "discovery"
+    }
+  }
+}
