@@ -9,7 +9,7 @@ Feature: Inicio de sesion de usuario
     When ingresa credenciales validas
     Then deberia visualizar el dashboard correspondiente a su rol
 
-  @discovery @critical @login @exception
+  @stable @critical @login @exception
   Scenario: Iniciar sesion con credenciales invalidas
     Given que el usuario se encuentra en la pantalla de inicio de sesion
     When ingresa credenciales invalidas

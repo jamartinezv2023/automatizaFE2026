@@ -1,5 +1,7 @@
 package com.automatizacion.stepdefinitions;
 
+import com.automatizacion.questions.VisualizaErrorAutenticacion;
+import com.automatizacion.tasks.IntentarIniciarSesionConCredencialesInvalidas;
 import com.automatizacion.questions.VisualizaDashboardCliente;
 import com.automatizacion.tasks.IniciarSesion;
 import com.automatizacion.userinterfaces.LoginPage;
@@ -29,7 +31,7 @@ public class LoginUsuarioStepDefinitions {
         setTheStage(new OnlineCast());
     }
 
-    @Given("que el cliente se encuentra en la pantalla de inicio de sesion")
+    @Given("que el usuario se encuentra en la pantalla de inicio de sesion")
     public void queElClienteSeEncuentraEnLaPantallaDeInicioDeSesion() {
         theActorCalled("Cliente").attemptsTo(
                 Open.url("https://logistica-frontend-54fk.onrender.com/login?next=%2Fdashboard"),
@@ -67,4 +69,18 @@ public class LoginUsuarioStepDefinitions {
                 seeThat(VisualizaDashboardCliente.correctamente(), equalTo(true))
         );
     }
+    @When("ingresa credenciales invalidas")
+    public void ingresaCredencialesInvalidas() {
+        theActorInTheSpotlight().attemptsTo(
+                IntentarIniciarSesionConCredencialesInvalidas.enFormulario()
+        );
+    }
+
+    @Then("deberia visualizar un mensaje de autenticacion fallida")
+    public void deberiaVisualizarUnMensajeDeAutenticacionFallida() {
+        theActorInTheSpotlight().should(
+                seeThat(VisualizaErrorAutenticacion.porCredencialesInvalidas(), equalTo(true))
+        );
+    }
+
 }
