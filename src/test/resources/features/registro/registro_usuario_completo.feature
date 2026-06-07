@@ -3,7 +3,7 @@ Feature: Registro completo de usuarios
   Quiero registrarme en el sistema
   Para acceder a funcionalidades de cliente
 
-  @stable @critical @registro @happy
+  @modelado @critical @registro @happy
   Scenario: Enviar formulario de registro con datos validos
     Given que el visitante se encuentra en la pantalla de registro
     When registra un nuevo cliente

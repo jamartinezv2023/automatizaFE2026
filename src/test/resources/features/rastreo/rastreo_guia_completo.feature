@@ -3,7 +3,7 @@ Feature: Rastreo completo de envios por guia
   Quiero consultar el estado de un envio por guia
   Para conocer el avance logistico de mi paquete
 
-  @stable @critical @rastreo @happy
+  @modelado @critical @rastreo @happy
   Scenario: Visualizar pantalla de rastreo de envios
     Given que el visitante se encuentra en la pagina principal
     When navega a la opcion de rastrear envio
