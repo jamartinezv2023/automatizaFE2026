@@ -4,8 +4,13 @@ import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import org.openqa.selenium.By;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class VisualizaMensajeRastreo implements Question<Boolean> {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(VisualizaMensajeRastreo.class);
+
 
     @Override
     public Boolean answeredBy(Actor actor) {
@@ -14,7 +19,7 @@ public class VisualizaMensajeRastreo implements Question<Boolean> {
                 .getText()
                 .toLowerCase();
 
-        System.out.println("BODY NORMALIZADO RASTREO => " + body);
+        LOGGER.info("{}", "BODY NORMALIZADO RASTREO => " + body);
 
         return body.contains("no encontrado")
                 || body.contains("no encontrada")

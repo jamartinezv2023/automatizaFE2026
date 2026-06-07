@@ -11,6 +11,8 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
@@ -18,6 +20,9 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 import static org.hamcrest.Matchers.containsString;
 
 public class RastreoGuiaStepDefinitions {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(RastreoGuiaStepDefinitions.class);
+
 
     private static final String URL_BASE =
             "https://logistica-frontend-54fk.onrender.com/";
@@ -46,8 +51,8 @@ public class RastreoGuiaStepDefinitions {
     public void deberiaVisualizarLaPantallaDeRastreo() {
         WebDriver driver = Serenity.getDriver();
 
-        System.out.println("RASTREO URL ACTUAL => " + driver.getCurrentUrl());
-        System.out.println("RASTREO BODY ACTUAL => " + driver.findElement(By.tagName("body")).getText());
+        LOGGER.info("{}", "RASTREO URL ACTUAL => " + driver.getCurrentUrl());
+        LOGGER.info("{}", "RASTREO BODY ACTUAL => " + driver.findElement(By.tagName("body")).getText());
 
         theActorInTheSpotlight().should(
                 seeThat(actor -> driver.getCurrentUrl(), containsString("/rastrear"))

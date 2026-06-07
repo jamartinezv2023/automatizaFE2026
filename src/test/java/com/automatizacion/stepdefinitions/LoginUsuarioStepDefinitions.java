@@ -11,6 +11,8 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
@@ -18,6 +20,9 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 import static org.hamcrest.Matchers.equalTo;
 
 public class LoginUsuarioStepDefinitions {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(LoginUsuarioStepDefinitions.class);
+
 
     @Before
     public void prepararEscenario() {
@@ -50,9 +55,9 @@ public class LoginUsuarioStepDefinitions {
         String titulo = driver.getTitle();
         String body = driver.findElement(org.openqa.selenium.By.tagName("body")).getText();
 
-        System.out.println("LOGIN URL ACTUAL => " + url);
-        System.out.println("LOGIN TITULO ACTUAL => " + titulo);
-        System.out.println("LOGIN BODY ACTUAL => " + body);
+        LOGGER.info("{}", "LOGIN URL ACTUAL => " + url);
+        LOGGER.info("{}", "LOGIN TITULO ACTUAL => " + titulo);
+        LOGGER.info("{}", "LOGIN BODY ACTUAL => " + body);
 
         Serenity.recordReportData()
                 .withTitle("Estado posterior al login")

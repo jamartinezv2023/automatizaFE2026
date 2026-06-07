@@ -10,6 +10,8 @@ import io.cucumber.java.en.*;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.UUID;
 
@@ -20,6 +22,9 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class LogoutUsuarioStepDefinitions {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(LogoutUsuarioStepDefinitions.class);
+
+
     @Before
     public void prepararEscenario() {
         setTheStage(new OnlineCast());
@@ -29,7 +34,7 @@ public class LogoutUsuarioStepDefinitions {
     public void queElClienteSeRegistroExitosamente() {
         String email = "logout-" + UUID.randomUUID() + "@test.com";
 
-        System.out.println("EMAIL LOGOUT GENERADO => " + email);
+        LOGGER.info("{}", "EMAIL LOGOUT GENERADO => " + email);
 
         theActorCalled("Cliente").attemptsTo(
                 Open.url("https://logistica-frontend-54fk.onrender.com/registro"),

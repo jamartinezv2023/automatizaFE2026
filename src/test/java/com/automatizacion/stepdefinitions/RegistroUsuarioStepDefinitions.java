@@ -8,6 +8,8 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.UUID;
 
@@ -17,6 +19,9 @@ import static org.hamcrest.Matchers.anyOf;
 import static org.hamcrest.Matchers.containsString;
 
 public class RegistroUsuarioStepDefinitions {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(RegistroUsuarioStepDefinitions.class);
+
 
     @Before
     public void prepararEscenario() {
@@ -34,7 +39,7 @@ public class RegistroUsuarioStepDefinitions {
     public void registraUnNuevoCliente() {
         String email = "cliente-" + UUID.randomUUID() + "@test.com";
 
-        System.out.println("EMAIL REGISTRO GENERADO => " + email);
+        LOGGER.info("{}", "EMAIL REGISTRO GENERADO => " + email);
 
         theActorInTheSpotlight().attemptsTo(
                 RegistrarUsuario.conDatos(
@@ -53,8 +58,8 @@ public class RegistroUsuarioStepDefinitions {
         String url = driver.getCurrentUrl();
         String body = driver.findElement(By.tagName("body")).getText();
 
-        System.out.println("URL FINAL REGISTRO => " + url);
-        System.out.println("BODY FINAL REGISTRO => " + body);
+        LOGGER.info("{}", "URL FINAL REGISTRO => " + url);
+        LOGGER.info("{}", "BODY FINAL REGISTRO => " + body);
 
         assertThat(
                 url,
