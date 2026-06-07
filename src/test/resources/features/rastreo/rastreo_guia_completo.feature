@@ -21,7 +21,7 @@ Feature: Rastreo completo de envios por guia
     When consulta una guia inexistente
     Then deberia ver un mensaje indicando que la guia no fue encontrada
 
-  @discovery @rastreo @exception
+  @stable @critical @rastreo @exception
   Scenario: Consultar rastreo con campo vacio
     Given que el visitante se encuentra en la pantalla de rastreo
     When intenta consultar rastreo sin ingresar guia

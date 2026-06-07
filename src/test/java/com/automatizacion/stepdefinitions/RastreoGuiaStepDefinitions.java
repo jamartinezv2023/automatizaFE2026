@@ -1,5 +1,8 @@
 package com.automatizacion.stepdefinitions;
 
+import static org.hamcrest.Matchers.equalTo;
+import com.automatizacion.questions.VisualizaValidacionGuiaRastreo;
+import com.automatizacion.tasks.IntentarConsultarRastreoSinGuia;
 import com.automatizacion.userinterfaces.DashboardPage;
 import com.automatizacion.userinterfaces.RastreoPage;
 import io.cucumber.java.Before;
@@ -58,4 +61,25 @@ public class RastreoGuiaStepDefinitions {
                 seeThat(actor -> driver.getCurrentUrl(), containsString("/rastrear"))
         );
     }
+    @When("intenta consultar rastreo sin ingresar guia")
+    public void intentaConsultarRastreoSinIngresarGuia() {
+        theActorInTheSpotlight().attemptsTo(
+                IntentarConsultarRastreoSinGuia.enFormulario()
+        );
+    }
+
+    @Then("deberia visualizar validacion de campo obligatorio")
+    public void deberiaVisualizarValidacionDeCampoObligatorio() {
+        theActorInTheSpotlight().should(
+                seeThat(VisualizaValidacionGuiaRastreo.deCampoObligatorio(), equalTo(true))
+        );
+    }
+
+    @Given("que el visitante se encuentra en la pantalla de rastreo")
+    public void queElVisitanteSeEncuentraEnLaPantallaDeRastreo() {
+        theActorCalled("Visitante").attemptsTo(
+                net.serenitybdd.screenplay.actions.Open.url("https://logistica-frontend-54fk.onrender.com/rastrear")
+        );
+    }
+
 }
