@@ -1,0 +1,12 @@
+{
+  "guiaExistente": {
+    "valor": "GUIA-PENDIENTE",
+    "estadoEsperado": "pendiente",
+    "uso": "rastreo feliz"
+  },
+  "guiaInexistente": {
+    "valor": "GUIA-INEXISTENTE-E2E",
+    "estadoEsperado": "no encontrada",
+    "uso": "rastreo excepcional"
+  }
+}

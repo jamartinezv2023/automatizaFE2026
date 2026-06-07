@@ -10,3 +10,8 @@ laboratorio/
 dependencias.txt
 laboratorio/
 dependencias.txt
+
+# E2E real test data
+src/test/resources/data/*.local.json
+src/test/resources/data/*real*.json
+src/test/resources/data/*secret*.json

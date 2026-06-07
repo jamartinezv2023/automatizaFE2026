@@ -1,0 +1,17 @@
+{
+  "cliente": {
+    "email": "cliente.semilla@example.test",
+    "passwordRef": "E2E_CLIENT_PASSWORD",
+    "estado": "pendiente"
+  },
+  "operador": {
+    "email": "operador.semilla@example.test",
+    "passwordRef": "E2E_OPERATOR_PASSWORD",
+    "estado": "pendiente"
+  },
+  "administrador": {
+    "email": "admin.semilla@example.test",
+    "passwordRef": "E2E_ADMIN_PASSWORD",
+    "estado": "pendiente"
+  }
+}
