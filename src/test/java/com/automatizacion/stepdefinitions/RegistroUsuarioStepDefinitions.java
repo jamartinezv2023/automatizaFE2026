@@ -1,5 +1,7 @@
 package com.automatizacion.stepdefinitions;
 
+import com.automatizacion.questions.VisualizaValidacionCorreoRegistro;
+import com.automatizacion.tasks.IntentarRegistrarUsuarioConCorreoInvalido;
 import com.automatizacion.questions.VisualizaValidacionesRegistro;
 import com.automatizacion.tasks.RegistrarUsuario;
 import com.automatizacion.tasks.IntentarRegistrarUsuarioSinDatos;
@@ -85,6 +87,20 @@ public class RegistroUsuarioStepDefinitions {
     public void deberiaVisualizarValidacionesDeCamposRequeridos() {
         theActorInTheSpotlight().should(
                 seeThat(VisualizaValidacionesRegistro.deCamposObligatorios(), equalTo(true))
+        );
+    }
+
+    @When("intenta registrar un cliente con correo invalido")
+    public void intentaRegistrarUnClienteConCorreoInvalido() {
+        theActorInTheSpotlight().attemptsTo(
+                IntentarRegistrarUsuarioConCorreoInvalido.enFormulario()
+        );
+    }
+
+    @Then("deberia visualizar validacion de correo invalido")
+    public void deberiaVisualizarValidacionDeCorreoInvalido() {
+        theActorInTheSpotlight().should(
+                seeThat(VisualizaValidacionCorreoRegistro.deCorreoInvalido(), equalTo(true))
         );
     }
 
