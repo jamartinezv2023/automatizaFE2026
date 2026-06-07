@@ -15,7 +15,7 @@ Feature: Inicio de sesion de usuario
     When ingresa credenciales invalidas
     Then deberia visualizar un mensaje de autenticacion fallida
 
-  @discovery @login @exception
+  @stable @critical @login @exception
   Scenario: Iniciar sesion con campos vacios
     Given que el usuario se encuentra en la pantalla de inicio de sesion
     When intenta iniciar sesion sin completar credenciales

@@ -1,5 +1,7 @@
 package com.automatizacion.stepdefinitions;
 
+import com.automatizacion.questions.VisualizaValidacionesLogin;
+import com.automatizacion.tasks.IntentarIniciarSesionSinCredenciales;
 import com.automatizacion.questions.VisualizaErrorAutenticacion;
 import com.automatizacion.tasks.IntentarIniciarSesionConCredencialesInvalidas;
 import com.automatizacion.questions.VisualizaDashboardCliente;
@@ -80,6 +82,20 @@ public class LoginUsuarioStepDefinitions {
     public void deberiaVisualizarUnMensajeDeAutenticacionFallida() {
         theActorInTheSpotlight().should(
                 seeThat(VisualizaErrorAutenticacion.porCredencialesInvalidas(), equalTo(true))
+        );
+    }
+
+    @When("intenta iniciar sesion sin completar credenciales")
+    public void intentaIniciarSesionSinCompletarCredenciales() {
+        theActorInTheSpotlight().attemptsTo(
+                IntentarIniciarSesionSinCredenciales.enFormulario()
+        );
+    }
+
+    @Then("deberia visualizar validaciones de campos obligatorios")
+    public void deberiaVisualizarValidacionesDeCamposObligatorios() {
+        theActorInTheSpotlight().should(
+                seeThat(VisualizaValidacionesLogin.deCamposObligatorios(), equalTo(true))
         );
     }
 
