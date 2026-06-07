@@ -1,6 +1,8 @@
 package com.automatizacion.stepdefinitions;
 
+import com.automatizacion.questions.VisualizaValidacionesRegistro;
 import com.automatizacion.tasks.RegistrarUsuario;
+import com.automatizacion.tasks.IntentarRegistrarUsuarioSinDatos;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import net.serenitybdd.core.Serenity;
@@ -14,6 +16,8 @@ import org.slf4j.LoggerFactory;
 import java.util.UUID;
 
 import static net.serenitybdd.screenplay.actors.OnStage.*;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.anyOf;
 import static org.hamcrest.Matchers.containsString;
@@ -70,4 +74,18 @@ public class RegistroUsuarioStepDefinitions {
                 )
         );
     }
+    @When("intenta registrar un cliente sin completar campos obligatorios")
+    public void intentaRegistrarUnClienteSinCompletarCamposObligatorios() {
+        theActorInTheSpotlight().attemptsTo(
+                IntentarRegistrarUsuarioSinDatos.enFormulario()
+        );
+    }
+
+    @Then("deberia visualizar validaciones de campos requeridos")
+    public void deberiaVisualizarValidacionesDeCamposRequeridos() {
+        theActorInTheSpotlight().should(
+                seeThat(VisualizaValidacionesRegistro.deCamposObligatorios(), equalTo(true))
+        );
+    }
+
 }

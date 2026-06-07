@@ -21,7 +21,7 @@ Feature: Registro completo de usuarios
     When intenta registrar un cliente con correo invalido
     Then deberia visualizar validacion de correo invalido
 
-  @discovery @registro @exception
+  @stable @critical @registro @exception
   Scenario: Registrar usuario con campos obligatorios vacios
     Given que el visitante se encuentra en la pantalla de registro
     When intenta registrar un cliente sin completar campos obligatorios
