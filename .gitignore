@@ -20,3 +20,4 @@ src/test/resources/data/*secret*.json
 src/test/resources/data/e2e-ci-secrets.local.json
 src/test/resources/data/seed-data.local.json
 src/test/resources/data/*.secrets.json
+.secrets/

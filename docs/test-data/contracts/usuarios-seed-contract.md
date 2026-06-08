@@ -94,3 +94,8 @@ cat > docs/test-data/contracts/environment-seed-contract.md <<'EOF'
 | Login estable | Pendiente |
 | Dashboard estable | Pendiente |
 | API de datos semilla | Pendiente |
+
+
+## Decisión v4.9.1
+
+Los usuarios semilla permanecen pendientes. Mientras no existan credenciales reales activas, la estrategia E2E autenticada usará usuarios dinámicos creados durante la ejecución.
