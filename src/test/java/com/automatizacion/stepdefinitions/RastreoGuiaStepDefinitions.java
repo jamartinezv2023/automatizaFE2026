@@ -1,5 +1,7 @@
 package com.automatizacion.stepdefinitions;
 
+import com.automatizacion.questions.VisualizaValidacionFormatoGuia;
+import com.automatizacion.tasks.ConsultarRastreoConFormatoInvalido;
 import static org.hamcrest.Matchers.equalTo;
 import com.automatizacion.questions.VisualizaValidacionGuiaRastreo;
 import com.automatizacion.tasks.IntentarConsultarRastreoSinGuia;
@@ -79,6 +81,20 @@ public class RastreoGuiaStepDefinitions {
     public void queElVisitanteSeEncuentraEnLaPantallaDeRastreo() {
         theActorCalled("Visitante").attemptsTo(
                 net.serenitybdd.screenplay.actions.Open.url("https://logistica-frontend-54fk.onrender.com/rastrear")
+        );
+    }
+
+    @When("consulta una guia con formato invalido")
+    public void consultaUnaGuiaConFormatoInvalido() {
+        theActorInTheSpotlight().attemptsTo(
+                ConsultarRastreoConFormatoInvalido.enFormulario()
+        );
+    }
+
+    @Then("deberia visualizar validacion de formato de guia")
+    public void deberiaVisualizarValidacionDeFormatoDeGuia() {
+        theActorInTheSpotlight().should(
+                seeThat(VisualizaValidacionFormatoGuia.esVisible(), equalTo(true))
         );
     }
 

@@ -27,7 +27,7 @@ Feature: Rastreo completo de envios por guia
     When intenta consultar rastreo sin ingresar guia
     Then deberia visualizar validacion de campo obligatorio
 
-  @discovery @rastreo @exception
+  @stable @critical @rastreo @exception
   Scenario: Consultar rastreo con formato invalido
     Given que el visitante se encuentra en la pantalla de rastreo
     When consulta una guia con formato invalido
