@@ -114,4 +114,11 @@ public class RastreoGuiaStepDefinitions {
         );
     }
 
+    @Then("deberia ver un mensaje indicando que la guia no fue encontrada")
+    public void deberiaVerUnMensajeIndicandoQueLaGuiaNoFueEncontrada() {
+        theActorInTheSpotlight().should(
+                seeThat(VisualizaMensajeRastreo.deGuiaNoEncontrada(), equalTo(true))
+        );
+    }
+
 }

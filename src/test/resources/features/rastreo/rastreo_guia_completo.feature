@@ -15,7 +15,7 @@ Feature: Rastreo completo de envios por guia
     When consulta una guia existente
     Then deberia visualizar el estado actual del envio
 
-  @discovery @rastreo @exception
+  @stable @critical @rastreo @exception
   Scenario: Consultar guia inexistente
     Given que el visitante se encuentra en la pantalla de rastreo
     When consulta una guia inexistente
