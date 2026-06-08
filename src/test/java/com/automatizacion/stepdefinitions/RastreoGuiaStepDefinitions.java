@@ -1,5 +1,7 @@
 package com.automatizacion.stepdefinitions;
 
+import com.automatizacion.questions.VisualizaMensajeRastreo;
+import com.automatizacion.tasks.ConsultarRastreoConGuiaInexistente;
 import com.automatizacion.questions.VisualizaValidacionFormatoGuia;
 import com.automatizacion.tasks.ConsultarRastreoConFormatoInvalido;
 import static org.hamcrest.Matchers.equalTo;
@@ -95,6 +97,20 @@ public class RastreoGuiaStepDefinitions {
     public void deberiaVisualizarValidacionDeFormatoDeGuia() {
         theActorInTheSpotlight().should(
                 seeThat(VisualizaValidacionFormatoGuia.esVisible(), equalTo(true))
+        );
+    }
+
+    @When("consulta una guia inexistente")
+    public void consultaUnaGuiaInexistente() {
+        theActorInTheSpotlight().attemptsTo(
+                ConsultarRastreoConGuiaInexistente.enFormulario()
+        );
+    }
+
+    @Then("deberia visualizar mensaje de guia no encontrada")
+    public void deberiaVisualizarMensajeDeGuiaNoEncontrada() {
+        theActorInTheSpotlight().should(
+                seeThat(VisualizaMensajeRastreo.deGuiaNoEncontrada(), equalTo(true))
         );
     }
 
