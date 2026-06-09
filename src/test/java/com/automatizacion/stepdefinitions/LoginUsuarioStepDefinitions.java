@@ -1,5 +1,8 @@
 package com.automatizacion.stepdefinitions;
 
+import net.serenitybdd.screenplay.actors.OnStage;
+import com.automatizacion.questions.VisualizaProteccionDeRuta;
+import com.automatizacion.tasks.AccederRutaProtegidaSinSesion;
 import com.automatizacion.questions.VisualizaValidacionesLogin;
 import com.automatizacion.tasks.IntentarIniciarSesionSinCredenciales;
 import com.automatizacion.questions.VisualizaErrorAutenticacion;
@@ -96,6 +99,32 @@ public class LoginUsuarioStepDefinitions {
     public void deberiaVisualizarValidacionesDeCamposObligatorios() {
         theActorInTheSpotlight().should(
                 seeThat(VisualizaValidacionesLogin.deCamposObligatorios(), equalTo(true))
+        );
+    }
+
+    @When("accede a una ruta protegida sin autenticacion")
+    public void accedeAUnaRutaProtegidaSinAutenticacion() {
+        theActorInTheSpotlight().attemptsTo(
+                AccederRutaProtegidaSinSesion.alDashboard()
+        );
+    }
+
+    @Then("deberia ser redirigido a la pantalla de inicio de sesion")
+    public void deberiaSerRedirigidoALaPantallaDeInicioDeSesion() {
+        theActorInTheSpotlight().should(
+                seeThat(VisualizaProteccionDeRuta.paraUsuarioNoAutenticado(), equalTo(true))
+        );
+    }
+
+    @Given("que el visitante no tiene sesion activa")
+    public void queElVisitanteNoTieneSesionActiva() {
+        OnStage.theActorCalled("Visitante");
+    }
+
+    @When("intenta acceder directamente a una ruta protegida")
+    public void intentaAccederDirectamenteAUnaRutaProtegida() {
+        theActorInTheSpotlight().attemptsTo(
+                AccederRutaProtegidaSinSesion.alDashboard()
         );
     }
 

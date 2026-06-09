@@ -21,7 +21,7 @@ Feature: Inicio de sesion de usuario
     When intenta iniciar sesion sin completar credenciales
     Then deberia visualizar validaciones de campos obligatorios
 
-  @discovery @security @login @exception
+  @candidate @blocked @security @login @exception
   Scenario: Acceder a una ruta protegida sin autenticacion
     Given que el visitante no tiene sesion activa
     When intenta acceder directamente a una ruta protegida
