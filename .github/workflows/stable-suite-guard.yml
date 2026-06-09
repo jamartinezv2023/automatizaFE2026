@@ -17,7 +17,6 @@ jobs:
     env:
       WEBDRIVER_DRIVER: chrome
       CHROME_BIN: /usr/bin/google-chrome
-      SERENITY_BROWSER_MAXIMIZED: false
 
     steps:
       - name: Checkout repository
@@ -35,23 +34,17 @@ jobs:
         with:
           chrome-version: stable
 
-      - name: Show Chrome version
+      - name: Grant execute permission
         run: |
-          google-chrome --version || chrome --version || chromium --version
+          chmod +x gradlew
+          chmod +x scripts/qa/stable-suite-check.sh
 
-      - name: Grant execute permission to Gradle
-        run: chmod +x gradlew
-
-      - name: Grant execute permission to QA scripts
-        run: chmod +x scripts/qa/stable-suite-check.sh
-
-      - name: Run stable suite guard in headless Chrome
+      - name: Run stable suite guard
         run: |
-          ./gradlew clean test aggregate \
-            -Dcucumber.filter.tags="@stable" \
+          ./scripts/qa/stable-suite-check.sh \
             -Dwebdriver.driver=chrome \
             -Dheadless.mode=true \
-            -Dchrome.switches="--headless=new;--no-sandbox;--disable-dev-shm-usage;--disable-gpu;--window-size=1920,1080"
+            -Dchrome.switches="--headless=new;--no-sandbox;--disable-dev-shm-usage;--disable-gpu;--remote-allow-origins=*;--window-size=1920,1080"
 
       - name: Upload Serenity report
         if: always()
