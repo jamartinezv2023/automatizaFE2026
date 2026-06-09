@@ -1,0 +1,45 @@
+name: Stable Suite Guard
+
+on:
+  push:
+    branches:
+      - main
+      - "feature/**"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  stable-suite:
+    name: Validate @stable Serenity suite
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+
+      - name: Grant execute permission to Gradle
+        run: chmod +x gradlew
+
+      - name: Grant execute permission to QA scripts
+        run: chmod +x scripts/qa/stable-suite-check.sh
+
+      - name: Run stable suite guard
+        run: ./scripts/qa/stable-suite-check.sh
+
+      - name: Upload Serenity report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: serenity-stable-report
+          path: |
+            target/site/serenity
+            build/reports/tests/test
+          if-no-files-found: ignore
