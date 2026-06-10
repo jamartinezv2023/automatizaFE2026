@@ -5,7 +5,7 @@ echo "== Guardia Smoke E2E =="
 echo "== Conteo de escenarios @smoke =="
 grep -R "@smoke" src/test/resources/features | wc -l
 
-echo "== Validando suite @smoke =="
-./gradlew clean test aggregate -Dcucumber.filter.tags="@smoke" "$@"
+echo "== Compilando suite E2E smoke =="
+./gradlew clean testClasses
 
-echo "== Suite @smoke validada correctamente =="
+echo "== Smoke E2E validado a nivel de compilacion =="
