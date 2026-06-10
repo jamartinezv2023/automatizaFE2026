@@ -1,34 +1,34 @@
-@remote @rastreo-completo
+@domain @remote @rastreo-completo
 Feature: Rastreo completo de envios por guia
   Como cliente o visitante
   Quiero consultar el estado de un envio por guia
   Para conocer el avance logistico de mi paquete
 
-  @remote @modelado @critical @rastreo @happy
+  @domain @remote @modelado @critical @rastreo @happy
   Scenario: Visualizar pantalla de rastreo de envios
     Given que el visitante se encuentra en la pagina principal
     When navega a la opcion de rastrear envio
     Then deberia visualizar la pantalla de rastreo
 
-  @remote @discovery @critical @rastreo @happy
+  @domain @remote @discovery @critical @rastreo @happy
   Scenario: Consultar guia existente
     Given que el visitante se encuentra en la pantalla de rastreo
     When consulta una guia existente
     Then deberia visualizar el estado actual del envio
 
-  @remote @candidate @diagnostic @guia-inexistente @critical @rastreo @exception
+  @domain @remote @candidate @diagnostic @guia-inexistente @critical @rastreo @exception
   Scenario: Consultar guia inexistente
     Given que el visitante se encuentra en la pantalla de rastreo
     When consulta una guia inexistente
     Then deberia ver un mensaje indicando que la guia no fue encontrada
 
-  @remote @stable @guia-vacia @critical @rastreo @exception
+  @domain @remote @stable @guia-vacia @critical @rastreo @exception
   Scenario: Consultar rastreo con campo vacio
     Given que el visitante se encuentra en la pantalla de rastreo
     When intenta consultar rastreo sin ingresar guia
     Then deberia visualizar validacion de campo obligatorio
 
-  @remote @stable @formato-invalido @critical @rastreo @exception
+  @domain @remote @stable @formato-invalido @critical @rastreo @exception
   Scenario: Consultar rastreo con formato invalido
     Given que el visitante se encuentra en la pantalla de rastreo
     When consulta una guia con formato invalido

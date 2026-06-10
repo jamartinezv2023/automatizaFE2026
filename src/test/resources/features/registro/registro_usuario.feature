@@ -1,6 +1,6 @@
 Feature: Registro de usuarios
 
-  @remote @smoke @stable @registro @happy
+  @domain @remote @smoke @stable @registro @happy
   Scenario: Enviar formulario de registro con datos validos
     Given que el visitante se encuentra en la pantalla de registro
     When registra un nuevo cliente

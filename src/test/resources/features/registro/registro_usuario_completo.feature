@@ -3,25 +3,25 @@ Feature: Registro completo de usuarios
   Quiero registrarme en el sistema
   Para acceder a funcionalidades de cliente
 
-  @remote @modelado @critical @registro @happy
+  @domain @remote @modelado @critical @registro @happy
   Scenario: Enviar formulario de registro con datos validos
     Given que el visitante se encuentra en la pantalla de registro
     When registra un nuevo cliente
     Then deberia permanecer en el flujo de registro o autenticacion
 
-  @remote @discovery @registro @exception
+  @domain @remote @discovery @registro @exception
   Scenario: Registrar usuario con correo ya existente
     Given que el visitante se encuentra en la pantalla de registro
     When intenta registrar un cliente con correo ya existente
     Then deberia visualizar un mensaje indicando que el correo ya esta registrado
 
-  @remote @smoke @stable @critical @registro @exception
+  @domain @remote @smoke @stable @critical @registro @exception
   Scenario: Registrar usuario con correo invalido
     Given que el visitante se encuentra en la pantalla de registro
     When intenta registrar un cliente con correo invalido
     Then deberia visualizar validacion de correo invalido
 
-  @remote @stable @critical @registro @exception
+  @domain @remote @stable @critical @registro @exception
   Scenario: Registrar usuario con campos obligatorios vacios
     Given que el visitante se encuentra en la pantalla de registro
     When intenta registrar un cliente sin completar campos obligatorios
