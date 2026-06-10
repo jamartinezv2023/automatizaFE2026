@@ -1,6 +1,6 @@
 Feature: Registro de usuarios
 
-  @stable @registro @happy
+  @smoke @stable @registro @happy
   Scenario: Enviar formulario de registro con datos validos
     Given que el visitante se encuentra en la pantalla de registro
     When registra un nuevo cliente

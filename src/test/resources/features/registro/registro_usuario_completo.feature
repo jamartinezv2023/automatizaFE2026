@@ -15,7 +15,7 @@ Feature: Registro completo de usuarios
     When intenta registrar un cliente con correo ya existente
     Then deberia visualizar un mensaje indicando que el correo ya esta registrado
 
-  @stable @critical @registro @exception
+  @smoke @stable @critical @registro @exception
   Scenario: Registrar usuario con correo invalido
     Given que el visitante se encuentra en la pantalla de registro
     When intenta registrar un cliente con correo invalido
