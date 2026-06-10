@@ -16,19 +16,19 @@ Feature: Rastreo completo de envios por guia
     When consulta una guia existente
     Then deberia visualizar el estado actual del envio
 
-  @domain @remote @candidate @diagnostic @guia-inexistente @critical @rastreo @exception
+  @domain @remote @remote @regression @stable @guia-inexistente @critical @rastreo @exception
   Scenario: Consultar guia inexistente
     Given que el visitante se encuentra en la pantalla de rastreo
     When consulta una guia inexistente
     Then deberia ver un mensaje indicando que la guia no fue encontrada
 
-  @domain @remote @stable @guia-vacia @critical @rastreo @exception
+  @domain @remote @remote @regression @stable @guia-vacia @critical @rastreo @exception
   Scenario: Consultar rastreo con campo vacio
     Given que el visitante se encuentra en la pantalla de rastreo
     When intenta consultar rastreo sin ingresar guia
     Then deberia visualizar validacion de campo obligatorio
 
-  @domain @remote @stable @formato-invalido @critical @rastreo @exception
+  @domain @remote @remote @regression @stable @formato-invalido @critical @rastreo @exception
   Scenario: Consultar rastreo con formato invalido
     Given que el visitante se encuentra en la pantalla de rastreo
     When consulta una guia con formato invalido
